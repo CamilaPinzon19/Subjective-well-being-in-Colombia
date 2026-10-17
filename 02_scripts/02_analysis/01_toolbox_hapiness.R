@@ -14,7 +14,8 @@ rm(list = ls());gc()
 # ==============================================================================
 #                           LIBRARY LOADING
 # ==============================================================================
-packages <- c('here','readr','readxl','dplyr','purrr')
+packages <- c('here','readr','readxl','dplyr','purrr', 'performance', 'survey',
+              'haven')
 new.packages <- packages[!(packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 invisible(lapply(packages, library, character.only = TRUE))
